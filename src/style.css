@@ -7,6 +7,9 @@ body{
 
 header{
   background-color:rgba(255,255,255,0.4);
-  height: 300px;
   width: 600px;
+}
+textarea{
+  height: 1em;
+  width: 5em;
 }

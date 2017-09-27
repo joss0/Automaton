@@ -1,6 +1,7 @@
 let width = window.innerWidth
 let height = window.innerHeight
 
+
 console.log('refreshed page')
 
 // page controlls
@@ -12,8 +13,13 @@ function refresh() {
 // TODO: firstGen
 
 
-
-// TODO: ruleTranstlator
-let ruleTranslator = rule=> {
-  // return binary array of rule
+let ruleTranslator = r=> {
+  let a = []
+  for(let i=0; i<8; i++) {
+    a.push(r >> i & 1)
+  }
+  return a
 }
+// TODO: loopArr
+
+// TODO: nextGen
