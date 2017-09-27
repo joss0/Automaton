@@ -1,0 +1,22 @@
++ Refresh automaton
+  _ Refresh button in header
+  _ Use new rule value in text box in header
+
++ Create header
+  _ should float at the top middle of the page and have space for...
+    _ A Title
+    _ A Rule Input Text Box
+    _ A refresh button for the automaton
+
++ function to add an automaton row to the HTML
+  _ nextGen function adds a generation array to the automaton array
+
++ First Gen Function
+
++ Automaton into arrays
+
++ Next Gen Function
+  + Array looping function
+  + Rule translation
+  + Ancestors of n function
+  + Rule correlation checker
