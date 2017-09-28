@@ -6,8 +6,8 @@
 + Create header
   _ should float at the top middle of the page and have space for...
     _ DONE --A Title--
-    _ DONE -- Rule Input Text Box
-    _ A refresh button for the automaton
+    _ DONE --A Rule Input Text Box--
+    _ DONE --A refresh button for the automaton--
 
 
 JS-----------------
@@ -20,7 +20,7 @@ JS-----------------
 + Automaton into arrays
 
 + Next Gen Function
-  + Array looping function
+  + DONE --Array looping function--
   + DONE --Rule translation--
   + Ancestors of n function
   + Rule correlation checker
