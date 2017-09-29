@@ -43,4 +43,39 @@ let loopArray = (arr, pos)=> {
   return pos in arr?arr[pos]:(pos<l?arr[l+pos]:arr[pos%l])
 }
 
-// TODO: nextGen
+let ancestors = (arr, pos)=> {
+  let a = []
+  for(let i=0; i<3; i++){
+    a.push(loopArray(arr, i+pos-1))
+  }
+  return a
+}
+
+let ruleChecker = (anc, rule)=> {
+  let a = 0
+  if(anc[0]){
+    a=a+4
+  }if(anc[1]) {
+    a=a+2
+  }if(anc[2]){
+    a=a+1
+  }
+  return rule[7-a]
+}
+
+let nextGen = (auto, rule)=> {
+  if(auto===undefined) {
+    auto = []
+    auto.push(firstGen({random: false, length: 20}))
+  } else {
+    auto[auto.length] = auto[auto.length-1].map((x,i,arr)=> {
+      return ruleChecker(
+        ancestors(arr, i),
+        rule
+      )
+    })
+  }
+  return auto
+}
+
+// TODO: nGen
