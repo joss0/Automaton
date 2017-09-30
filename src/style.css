@@ -13,3 +13,10 @@ textarea{
   height: 1em;
   width: 5em;
 }
+#content{
+  position: absolute;
+  z-index: -10;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
