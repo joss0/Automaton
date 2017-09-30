@@ -64,11 +64,11 @@ let ruleChecker = (anc, rule)=> {
 }
 
 let nextGen = (auto, rule)=> {
-  if(auto===undefined) {
+  if(rule===undefined) {
     auto = []
-    auto.push(firstGen({random: false, length: 20}))
+    auto.push(firstGen({isRandom: false, length: 20}))
   } else {
-    auto[auto.length] = auto[auto.length-1].map((x,i,arr)=> {
+    auto = auto[auto.length-1].map((x,i,arr)=> {
       return ruleChecker(
         ancestors(arr, i),
         rule
@@ -78,4 +78,23 @@ let nextGen = (auto, rule)=> {
   return auto
 }
 
-// TODO: nGen
+const Automaton = {
+  firstGen: firstGen,
+  ruleTranslator: ruleTranslator,
+  loopArray: loopArray,
+  ancestors: ancestors,
+  ruleChecker: ruleChecker,
+  nextGen: nextGen,
+}
+
+let automaton = (settings)=> {
+  let aut = Object.create(Automaton)
+  aut.settings = settings
+  aut.ruleArr = aut.ruleTranslator(aut.settings.ruleNumber)
+  aut.feild = [aut.firstGen(aut.settings)]
+  aut.next = ()=> {
+    let feild = aut.feild
+    aut.feild.push(aut.nextGen(aut.feild, aut.ruleArr))
+  }
+  return aut
+}
