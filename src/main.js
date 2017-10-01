@@ -41,7 +41,7 @@ let firstGen = (settings)=> {
   if(settings.isRandom){
     // populate firstGen randomly
     for(i=0; i < settings.length; i++){
-      a.push(Math.floor(1&Math.isRandom()*2))
+      a.push(Math.floor(1&Math.random()*2))
     }
     return a
   } else {
