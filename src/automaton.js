@@ -1,12 +1,4 @@
 
-function settings(rule, length, isRandom) {
-  let settingsObject = {rule:30, length: 100, isRandom: false}
-  if(rule) settingsObject.rule = rule
-  if(length) settingsObject.length = length
-  if(isRandom) settingsObject.isRandom = isRandom
-  return settingsObject
-}
-
 let firstGen = (settings)=> {
   let a=[]
   if(settings.isRandom) {
@@ -81,6 +73,14 @@ const Automaton = {
   nextGen: nextGen,
 }
 
+function settings(rule, length, isRandom) {
+  let settingsObject = {rule:30, length: 100, isRandom: false}
+  if(rule) settingsObject.rule = rule
+  if(length) settingsObject.length = length
+  if(isRandom) settingsObject.isRandom = isRandom
+  return settingsObject
+}
+
 let automaton = (settings)=> {
   let aut = Object.create(Automaton)
   aut.settings = settings
@@ -97,6 +97,5 @@ let automaton = (settings)=> {
   return aut
 }
 
-let rule30 = automaton(settings(30,30))
-rule30.generate(15)
-console.log(rule30)
+// curryish let rule30 = automaton(settings(30,30))
+// curried  let rule30 = automaton(30,30)()
