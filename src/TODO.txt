@@ -17,7 +17,7 @@ JS-----------------
 
 + DONE --First Gen Function--
 
-+ Automaton into arrays
++ DONE --Automaton into arrays--
 
 + DONE --Next Gen Function--
   + DONE --Array looping function--
@@ -25,7 +25,6 @@ JS-----------------
   + DONE --Ancestors of n function--
   + DONE --Rule correlation checker--
 
-+ nGen function
-  _ Factory that makes a recursive function for a given rule???
-  _ Or a factory making an automaton object with all the settings inside????
-  _ I don't think it needs to be that complicated
++ DONE --nGen function--
+  _ ~Factory that makes a recursive function for a given rule???~
+  _ DONE --Or a factory making an automaton object with all the settings inside????--
