@@ -3,13 +3,13 @@ let firstGen = (settings)=> {
   let a=[]
   if(settings.isRandom) {
     // populate firstGen randomly
-    for(i=0; i < settings.length; i++){
+    for(let i=0; i < settings.length; i++){
       a.push(Math.floor(1&Math.random()*2))
     }
     return a
   } else {
     // populate firstGen with all cells empty except the middle cell
-    for(i=0; i < settings.length; i++) {
+    for(let i=0; i < settings.length; i++) {
       a.push(i === settings.length>>1?1:0)
     }
     return a
@@ -90,7 +90,7 @@ let automaton = (settings)=> {
     aut.feild.push(aut.nextGen(aut.feild, aut.ruleArr))
   }
   aut.generate = (length)=> {
-    for(i=0; i<length; i++) {
+    for(let i=0; i<length; i++) {
       aut.next()
     }
   }
