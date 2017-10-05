@@ -94,6 +94,9 @@ let automaton = (settings)=> {
       aut.next()
     }
   }
+  aut.draw = ()=> {
+    console.log(aut.feild)
+  }
   return aut
 }
 
