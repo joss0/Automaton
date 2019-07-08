@@ -1,22 +1,9 @@
 body{
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #4BB39A;
+  border:0px;
+  margin:0px;
+  padding:0px;
 }
-
-header{
-  background-color:rgba(255,255,255,0.5);
-  width: 600px;
-}
-textarea{
-  height: 1em;
-  width: 5em;
-}
-#content{
-  position: absolute;
-  z-index: -10;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+canvas{
+  background-color:#ccc;
+  width: 800px;
 }
