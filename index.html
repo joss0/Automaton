@@ -6,7 +6,24 @@
   <title>Automaton</title>
 </head>
 <body>
-<canvas id=canvas width=800 height=400></canvas>
+  <form id="controls">
+    <label>Rule: <input type="number" id="rule" min="0" max="255" value="30"></label>
+    <label>Start:
+      <select id="start">
+        <option value="ONE">Centered</option>
+        <option value="RANDOM">Random</option>
+      </select>
+    </label>
+    <label>Speed (ms): <input type="number" id="speed" min="10" step="10" value="50"></label>
+    <label>Mode:
+      <select id="mode">
+        <option value="SCROLLING">Scrolling</option>
+        <option value="CONTINUOUS">Continuous</option>
+      </select>
+    </label>
+    <button type="button" id="startButton">Start</button>
+  </form>
+  <canvas id="canvas" width="800" height="400"></canvas>
   <script src="src/main.js" charset="utf-8"></script>
 </body>
 </html>
