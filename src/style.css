@@ -1,9 +1,16 @@
-body{
-  border:0px;
-  margin:0px;
-  padding:0px;
+body {
+  margin: 0;
+  padding: 0;
 }
-canvas{
-  background-color:#ccc;
+
+#controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+canvas {
+  background-color: #ccc;
   width: 800px;
 }
